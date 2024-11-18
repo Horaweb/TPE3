@@ -1,0 +1,66 @@
+<?php include 'templates/layout/header.phtml';?>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$res = !empty($_SESSION['ID_USER']);
+?>
+<?php if (!empty($_SESSION['ID_USER'])): ?>
+        <h3>Editar Vehiculo</h3>
+        <form action="<?= BASE_URL ?>update/<?= $vehiculo->id ?>" method='POST'>
+            <div>
+                <div>
+                    <div>
+                        <label>Marca</label>
+                        <input required name="marca" type="text">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label>Modelo</label>
+                        <input required name="modelo" type="text">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Tipo</label>
+                        <input required name="tipo" type="text">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Año</label>
+                        <input required name="año" type="number">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Precio</label>
+                        <input required name="precio" type="number">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Precio</label>
+                        <input required name="precio" type="number">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="">Concesionaria</label>
+                        <select name="concecionaria" id="">
+                            <option value="1">Simho</option>
+                            <option value="2">Hascar</option>
+                            <option value="3">Preho</option>
+                            <option value="4">H Automotores</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Guardar</button>
+        </form>
+
+<?php endif; ?>
+
+<?php require 'templates/layout/footer.phtml' ?>

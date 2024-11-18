@@ -1,0 +1,15 @@
+<?php include 'templates/layout/header.phtml';?>
+<form method='post' action='login'>
+    <div>
+        <label for='username'>Usuario:</label>
+        <input type='text' id='username' name='username' required>
+    </div>
+    <div>
+        <label for='password'>Contraseña:</label>
+        <input type='password' id='password' name='password' required>
+    </div>
+    
+    <button type='submit'>Guardar</button>
+</form>
+
+<?php require 'templates/layout/footer.phtml' ?>

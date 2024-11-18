@@ -1,0 +1,37 @@
+nav {
+    margin-top: -15px;
+  }
+  
+  nav>ul {
+    width: 95%;
+    padding-inline-start: 10px;
+  }
+  
+  nav>ul>li:hover {
+    background-color: var(--color-extra);
+  }
+  
+  nav>ul>li {
+    border: 1px solid black;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 20px;
+    display: flex;
+  }
+  
+  nav>ul>li a {
+    text-decoration: none;
+    padding: 10px 30%;
+    color: var(--color-cambio);
+    opacity: 0.7;
+  }
+
+  .encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    margin-bottom: 2px;
+  }
+
